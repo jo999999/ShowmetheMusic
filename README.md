@@ -26,6 +26,7 @@
 - 감정 label : 총 4개의 label로 재 라벨링 (0: 기쁨,행복/ 1:분노,불안,당황,놀람/ 2. 슬픔,상처/ 3: 중립)
 
 ### - 감정 분류
+![image](https://user-images.githubusercontent.com/77534419/152346947-cda619b1-651d-49a3-b7aa-af59a675fc63.png)
 
 ### - 문장 분리(매우 긴 문장 처리 방법)
 ![image](https://user-images.githubusercontent.com/57586314/152272661-24e3cf5b-9095-4bcd-8899-905ccc8c3feb.png)
