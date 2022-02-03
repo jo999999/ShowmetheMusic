@@ -27,6 +27,9 @@
 
 ### - 감정 분류
 ![image](https://user-images.githubusercontent.com/77534419/152346947-cda619b1-651d-49a3-b7aa-af59a675fc63.png)
+- 왜 bert, electra 기반 모델들로 했는지
+- 성능평가 왜 acc, loss / 하이퍼파리미터 튜닝, optimizer등 얘기 넣기
+- 그 외는 상민 프로젝트 공유한거 참조해서 추가
 
 ### - 문장 분리(매우 긴 문장 처리 방법)
 ![image](https://user-images.githubusercontent.com/57586314/152272661-24e3cf5b-9095-4bcd-8899-905ccc8c3feb.png)
