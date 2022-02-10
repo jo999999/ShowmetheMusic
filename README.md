@@ -22,7 +22,7 @@
 ## NLP 모델링
 
 ### - 데이터 크롤링 및 전처리
-우선, 데이터 선정을 위해 브런치, 인스타그램 크롤링과 AI HUB 데이터 등을 확보하였고, 팀원끼리 분배해 데이터 라벨링을 진행하였다. 그 후, 데이터전체 혹은 데이터별로 기본 KoBERT 모델을 돌렸고, 그 결과 AI HUB 데이터가 가장 본 팀의 프로젝트 목표와 적합하다 판단했고 이를 최종 데이터셋으로 선정하였다.
+우선, 데이터 선정을 위해 브런치, 인스타그램 크롤링과 AI HUB 데이터 등을 확보하였고, 팀원끼리 분배해 데이터 라벨링을 진행함. 그 후, 데이터전체 혹은 데이터별로 기본 KoBERT 모델을 돌렸고, 그 결과 AI HUB 데이터가 가장 본 팀의 프로젝트 목표와 적합하다 판단했고 이를 최종 데이터셋으로 선정.
 
 ### - 최종 데이터, 감정 label
 - 최종 데이터셋 : AI Hub의 감성대화 말뭉치 데이터, 한국어 단발성 대화 데이터
@@ -30,7 +30,7 @@
 - 감정 label을 4가지로 분류한 이유 : + softmax 값으로 전달하는 얘기도
 
 ### - 감정 분류 (모델 구축 및 학습)
-- fine tuning한 하이퍼파라미터는 아래와 같다.
+- fine tuning한 하이퍼파라미터는 아래와 같음
 ```
 BATCH_SIZE = 32
 NUM_EPOCHS = 5 # 3
@@ -49,9 +49,9 @@ warmup_step = int(t_total * warmup_ratio)
 scheduler = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps=warmup_step, num_training_steps=t_total)
 
 ```
-- 그리고 7개의 후보 모델인 pretrained nlp model들을 돌린 결과, 각각의 성능(ACC)들은 아래와 같다.
+- 그리고 7개의 후보 모델인 pretrained nlp model들을 돌린 결과, 각각의 성능(ACC)들은 아래와 같음
 ![image](https://user-images.githubusercontent.com/77534419/152346947-cda619b1-651d-49a3-b7aa-af59a675fc63.png)
-- KcBERT-large 라는 모델의 성능이 가장 좋았다. 이는 본 프로젝트의 전제가 사용자의 단발적인 일기, 구어체 등의 비공식적인 글을 입력받는 것이기에, ai hub 의 말뭉치, 단발성 대화를 학습데이터로 사용했으며, 고로 이와 방향성이 유사한 KcBert-large 모델의 성능이 가장 우수함을 시사한다. 하지만 추후에 분류 성능을 더 높이기 위해 모델별로 다시 하이퍼파라미터 튜닝과 추가적인 앙상블 등 다양한 기법을 적용할 것이다.
+- KcBERT-large 라는 모델의 성능이 가장 좋았음. 이는 본 프로젝트의 전제가 사용자의 단발적인 일기, 구어체 등의 비공식적인 글을 입력받는 것이기에, ai hub 의 말뭉치, 단발성 대화를 학습데이터로 사용했으며, 고로 이와 방향성이 유사한 KcBert-large 모델의 성능이 가장 우수함을 시사함. 하지만 추후에 분류 성능을 더 높이기 위해 모델별로 다시 하이퍼파라미터 튜닝과 추가적인 앙상블 등 다양한 기법을 적용할 것임.
 
 ### - 문장 분리(매우 긴 문장 처리 방법)
 ![image](https://user-images.githubusercontent.com/57586314/152272661-24e3cf5b-9095-4bcd-8899-905ccc8c3feb.png)
