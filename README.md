@@ -21,16 +21,18 @@
 
 ## NLP 모델링
 
+### - 데이터 크롤링 및 전처리
+우선, 데이터 선정을 위해 브런치, 인스타그램 크롤링과 AI HUB 데이터 등을 확보하였고, 팀원끼리 분배해 데이터 라벨링을 진행하였다. 그 후, 데이터전체 혹은 데이터별로 기본 KoBERT 모델을 돌렸고, 그 결과 AI HUB 데이터가 가장 본 팀의 프로젝트 목표와 적합하다 판단했고 이를 최종 데이터셋으로 선정하였다.
+
 ### - 최종 데이터, 감정 label
 - 최종 데이터셋 : AI Hub의 감성대화 말뭉치 데이터, 한국어 단발성 대화 데이터
 - 감정 label : 총 4개의 label로 재 라벨링 (0: 기쁨,행복/ 1:분노,불안,당황,놀람/ 2. 슬픔,상처/ 3: 중립)
 
-### - 감정 분류
+### - 감정 분류 (모델 구축 및 학습)
 ![image](https://user-images.githubusercontent.com/77534419/152346947-cda619b1-651d-49a3-b7aa-af59a675fc63.png)
 - 왜 bert, electra 기반 모델들로 했는지
 - 성능평가 왜 acc, loss / 하이퍼파리미터 튜닝, optimizer등 얘기 넣기
-- 그 외는 상민 프로젝트 공유한거 참조해서 추가
-- https://hackmd.io/@9NfvP9AZQL2Psilxs3oNBA/SyH-EkVt_,  https://github.com/afnf33/emoTale , 
+
 
 ### - 문장 분리(매우 긴 문장 처리 방법)
 ![image](https://user-images.githubusercontent.com/57586314/152272661-24e3cf5b-9095-4bcd-8899-905ccc8c3feb.png)
